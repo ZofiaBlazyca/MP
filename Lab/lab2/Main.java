@@ -1,25 +1,22 @@
-package uj.cs.mp.lab2;
+package uj.cs.MP.Lab.lab2;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args)
     {
-        System.out.print("Podaj rozmiar tablicy: ");
+        System.out.print("Enter array size: ");
         Scanner scanner = new Scanner(System.in);
         int sizeOfArray = scanner.nextInt();
         System.out.println();
 
-        // tworzenie tablicy
-        //List<Integer> randomArray = new ArrayList<>();
+        // creating an array
         int[] array = new int[sizeOfArray];
         Random random = new Random();
 
-        // wypelnianie tablicy jednowymiarowej losowymi liczbami z zakresu 0-11
-        System.out.println("Wylosowana tablica jednowymiarowa to: ");
+        // filling the 1D array with random numbers from range 0-11
+        System.out.println("Drawn one-dimensional array: ");
         for(int i = 0; i < sizeOfArray; i++)
         {
             array[i] = random.nextInt(12);
@@ -27,8 +24,8 @@ public class Main {
         }
         System.out.println();
 
-        // wypelnianie tablicy dwuwymiarowej losowymi liczbami z zakresu 0-18
-        System.out.println("Wylosowana tablica dwuwymiarowa to: ");
+        // filling the 2D array with random numbers from range 0-18
+        System.out.println("Drawn two-dimensional array: ");
         int[][] array2 = new int[sizeOfArray][sizeOfArray];
         for(int i = 0; i < sizeOfArray; i++)
         {
@@ -39,6 +36,5 @@ public class Main {
             }
             System.out.println();
         }
-
     }
 }
